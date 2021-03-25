@@ -1,0 +1,32 @@
+<p>review-count works!</p>
+<p>review-list works!</p>
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Review List</h2>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">cid</th>
+            
+            <th class="text-center" scope="col">count of reviews</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let count of Counts; let i = index">
+            <th scope="col">{{count.id}}</th>
+            <td>{{count.coid}}</td>
+            <td>{{count.count}}</td>
+            
+            
+            
+            <td class="text-center">
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

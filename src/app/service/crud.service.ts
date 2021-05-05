@@ -5,6 +5,8 @@ import { Review } from '../service/Review';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Company } from './Company';
+import { Register } from './Register';
 
 @Injectable({
   providedIn: 'root'
@@ -21,13 +23,50 @@ export class CrudService {
   constructor(private httpClient: HttpClient) { }
 
   // Add
-  AddBook(data: Book): Observable<any> {
-    let API_URL = `${this.REST_API}/add-book`;
+  AddBook(data: Comment): Observable<any> {
+    let API_URL = `${this.REST_API}/comment`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)
       )
   }
+
+  // Add
+  AddCompany(data: Company): Observable<any> {
+    let API_URL = `${this.REST_API}/add-comment`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
+  // Add
+  Register(data: Company): Observable<any> {
+    let API_URL = `${this.REST_API}/register`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
+
+  
+  // Add
+  Login(data: Company): Observable<any> {
+    let API_URL = `${this.REST_API}/login`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
+    //update
+    public getSub(id : any){
+      return this.httpClient.get(`${this.REST_API}/fetchsubs` );
+   //   let headers = new HttpHeaders()
+    //   console.log("service--------- id and data " +id , +data);
+      }
+
 
   // Add
   AddReview(data: Review): Observable<any> {
@@ -38,10 +77,34 @@ export class CrudService {
       )
   }
 
+  
+  // Add
+  rr(data: Review): Observable<any> {
+    let API_URL = `${this.REST_API}/findAllReviews`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
   // Get all objects
   GetBooks() {
-    return this.httpClient.get(`${this.REST_API}/get`);
+    return this.httpClient.get(`${this.REST_API}/AllCompanyDetails`);
   }
+  // Get all objects
+  GetComments() {
+    return this.httpClient.get(`${this.REST_API}/get-comment`);
+  }
+  // Get all objects
+  GetCompany() {
+    return this.httpClient.get(`${this.REST_API}/AllCompanyDetails`);
+  }
+
+  GetProfile(){
+    return this.httpClient.get(`${this.REST_API}/fetch`);
+  
+  }
+
 
 
 
@@ -57,13 +120,23 @@ export class CrudService {
   }
 
   // Update
-  updateBook(id:any, data:any): Observable<any> {
-    let API_URL = `${this.REST_API}/update-book/${id}`;
+  updatePass(data:Register): Observable<any> {
+    let API_URL = `${this.REST_API}/forgot`;
     return this.httpClient.put(API_URL, data, { headers: this.httpHeaders })
       .pipe(
         catchError(this.handleError)
       )
   }
+
+
+    // Update
+    updateProfile(data:Register): Observable<any> {
+      let API_URL = `${this.REST_API}/pedit`;
+      return this.httpClient.put(API_URL, data, { headers: this.httpHeaders })
+        .pipe(
+          catchError(this.handleError)
+        )
+    }
 
   // Delete
   deleteBook(id:any): Observable<any> {

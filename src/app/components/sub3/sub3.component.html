@@ -1,0 +1,11 @@
+
+<p>
+  Start Uploading  to see some magic happen :)
+</p>
+
+
+<div style="text-align:center;">
+<img *ngFor='let url of urls'  [src]="url" height="500"> <br/>
+
+<input type='file' (change)="onSelectFile($event)" multiple>
+</div>

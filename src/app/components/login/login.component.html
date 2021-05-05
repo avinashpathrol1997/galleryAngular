@@ -1,0 +1,34 @@
+<div class="container justify-content-center mt-5">
+  <h1  style="text-align:center">Login</h1>
+  <p style="text-align:center">Please fill in this form to Login  into your account.</p>
+  <hr>
+  </div>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Email</label>
+          <input class="form-control" type="text" formControlName="email" required>
+        </div>
+         
+        <span>
+        <div class="form-group">
+            <label>Password</label>
+              <input class="form-control" type="text" formControlName="password"  [type]="hide ? 'password' : 'text'" required>
+              <mat-icon svgIcon="thumb-up" class="placeholder" (click)="myFunction()">{{hide ? 'show password' : 'hide'}}</mat-icon>
+          </div>
+        </span>
+        <a href="/forgot">Forgot Password ?</a>
+        <!-- <div class="form-group">
+          <label>Description</label>
+          <input class="form-control" type="text" formControlName="description" >
+        </div> -->
+  
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

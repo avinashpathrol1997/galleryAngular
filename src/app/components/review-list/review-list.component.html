@@ -17,12 +17,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let review of Reviews; let i = index; ">
+          <tr *ngFor="let review of Reviews; let i = index;">
             <th scope="row">{{review.id}}</th>
             <td>{{review.cid}}</td>
             <td>{{review.name}}</td>
-            <td>{{Reviews[0].Reviews[0].rating}} </td>
-            <td>{{Reviews[0].Reviews[0].comment}}</td>
+            <td>{{review.Reviews[i].rating}},{{review.Reviews[1].rating}},{{review.Reviews[2].rating}}</td>
+            <td>{{review.Reviews[i].comment}},{{review.Reviews[1].comment}},{{review.Reviews[2].comment}}</td>
             
             
             

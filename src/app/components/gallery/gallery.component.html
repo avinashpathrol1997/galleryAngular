@@ -1,0 +1,135 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container">
+  <h3>Welcome to Add Gallery Section</h3>
+  <ul class="nav nav-tabs">
+    <li class=""><a href="/company-list">Home</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/subscription">Subscriptions</a></li>
+    <li><a href="/addg">Add Gallery</a></li>
+  </ul>
+
+  <!-- <h3>Subscription No. selected: {{ sid }}</h3>
+   -->
+  <h3>Congratulations You have selected : {{ text1 }}</h3> <hr>
+
+<!--   
+<div style="text-align:left">
+	<div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+	<div><img [src]="url" *ngIf="url" height="400" width="500"></div>
+	<p>
+		<input type="file" (change)="selectFile($event)">
+	</p>
+</div>
+ -->
+
+<!-- <div class="row justify-content-center mt-5" style="text-align: center;">
+  <div class="col-md-4">
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Enter Comments</label>
+        <input class="form-control" type="text" formControlName="comment" required>
+      </div>
+
+       <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Add Comments</button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+
+
+<!-- 
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Comments</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comment of Books; let i = index">
+        <td>{{comment.comment}}</td>
+       
+      
+    </tbody>
+  </table>
+</div>
+ -->
+
+<div class="container">
+
+  
+	<div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+	<div><img [src]="url" *ngIf="url" height="400" width="500"></div>
+	<p>
+		<input type="file" (change)="selectFile($event)">
+	</p>
+
+
+      <!-- <div class="col-md-"> -->
+        <div class="container  justify-content-center " style="margin-right: 10rem;">
+          
+    <div class="row justify-content-center " >
+          <div class="col-md-12">
+        <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" formControlName="name" required>
+          </div>
+    
+          <div class="form-group">
+            <label>Enter Description</label>
+            <input class="form-control" type="text" formControlName="comment" required>
+          </div>
+    
+          <div class="form-group">
+            <button class="btn btn-primary col-md-2" type="submit">Publish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+   <br>
+
+
+   <div class="row justify-content-center " >
+    <div class="col-md-12">
+  <form [formGroup]="bookForm" (ngSubmit)="show()">
+ <div class="form-group">
+            <!-- <button class="btn btn-primary col-md-2" type="submit" style="margin-left: 1.4rem;">Show Comments</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+<br>
+
+<div class="container">
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Comments</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comment of Books; let i = index">
+        <td>{{comment.name}}</td>
+        <td>{{comment.comment}}</td>
+       
+      
+    </tbody>
+  </table>
+</div>
+</div>
+ 
+
+

@@ -1,0 +1,73 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container">
+  <h3>Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class=""><a href="/company-list">Home</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/subscription">Subscriptions</a></li>
+    <li><a href="/gallery">Add Gallery</a></li>
+  </ul>
+
+<div class="container py-4">
+    <h5>Available Subscriptions for you!</h5>
+    <hr>
+    <div class="card-deck-wrapper">
+        <div class="card-deck">
+            <div class="card p-2">     
+                <a class="card-block stretched-link text-decoration-none" href="/gallery1">
+                    <h4 class="card-title" style="text-align: center;">Basic</h4>
+                    
+                    <p class="card-text">This will let you upload 1 photos at a time , this will be auto-renewed every month.</p>
+                    <ul>
+                        <li>$5/30 days</li>
+                        <li>Publish Comment</li>
+                        <li>auto-renewed</li>
+                      </ul>
+                    <!-- <button type="button" class="btn btn-primary" [routerLink]="['/login']">Navigate</button> -->
+                    <!-- <button id="id" type="button" class="btn btn-primary" style="margin-left: 75%; margin-top: -16%;">Buy Now</button> -->
+
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </a>
+                
+               
+            </div>
+
+            
+            <div class="card p-2">
+                <a class="card-block stretched-link text-decoration-none" href="/gallery2">
+                    <h4 class="card-title" style="text-align: center;">Advance</h4>
+                    <p class="card-text">This will let you upload 5 photos at a time , this will be auto-renewed every month.</p>
+                    <ul>
+                        <li>$10/30 days</li>
+                        <li>Publish Comment</li>
+                        <li>auto-renewed</li>
+                      </ul>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </a>
+            </div>
+            <div class="card p-2">
+                <a class="card-block stretched-link text-decoration-none" href="/gallery3">
+                    <h4 class="card-title" style="text-align: center;">Pro</h4>
+                    <p class="card-text">This will let you upload 10 photos at a time , this will be auto-renewed every month.</p>
+                    <ul>
+                        <li>$15/30 days</li>
+                        <li>Publish Comment</li>
+                        <li>auto-renewed</li>
+                      </ul>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </a>
+            </div>
+        </div>
+    </div> <br>
+    <button class="btn btn-primary " style="margin-left: 12rem;" type="submit"  (click)="doToggle()">Current Plan</button>
+    <button class="btn btn-primary " style="margin-left: 32rem;" type="submit"  (click)="doToggle1()">{{toggle1 ? 'Current Plan':'Buy Now'}}</button>
+    <button class="btn btn-primary " style="margin-left: 90rem; margin-top: -5rem;"  type="submit"  (click)="doToggle2()">{{toggle2 ? 'Current Plan':'Buy Now'}}</button>
+
+                   
+</div>
+  

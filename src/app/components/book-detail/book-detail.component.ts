@@ -40,14 +40,14 @@ export class BookDetailComponent implements OnInit {
 
   ngOnInit() { }
 
-  onUpdate(): any {
-    this.crudService.updateBook(this.getId, this.updateForm.value)
-    .subscribe(() => {
-        console.log('Data updated successfully!')
-        this.ngZone.run(() => this.router.navigateByUrl('/books-list'))
-      }, (err) => {
-        console.log(err);
-    });
-  }
+  // onUpdate(): any {
+  //   this.crudService.updateBook(this.getId, this.updateForm.value)
+  //   .subscribe(() => {
+  //       console.log('Data updated successfully!')
+  //       this.ngZone.run(() => this.router.navigateByUrl('/books-list'))
+  //     }, (err) => {
+  //       console.log(err);
+  //   });
+  // }
 
 }

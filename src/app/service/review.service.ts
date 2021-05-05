@@ -23,23 +23,54 @@ export class ReviewService {
   
   // Add
   AddReview(data: Review): Observable<any> {
-    let API_URL = `${this.REST_API}/add-book1`;
+    let API_URL = `${this.REST_API}/add-review`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)
       )
   }
 
+// Add
+rr(data: Review): Observable<any> {
+  let API_URL = `${this.REST_API}/findAllReviews`;
+  return this.httpClient.post(API_URL, data)
+    .pipe(
+      catchError(this.handleError)
+    )
+}
+
+
+  // Get all objects
+  Getrr() {
+    return this.httpClient.get(`${this.REST_API}/findAllReviews`);
+  }
+
   // Get all objects
   GetReviews() {
-    return this.httpClient.get(`${this.REST_API}/api1`);
+    return this.httpClient.get(`${this.REST_API}/Reviews_Company_details`);
   }
 
 // Get all objects
 GetCounts() {
-  return this.httpClient.get(`${this.REST_API}/api2`);
+  return this.httpClient.get(`${this.REST_API}/rawQuery`);
 }
-  
+ 
+//Get all objects
+GetList() {
+  return this.httpClient.get(`${this.REST_API}/list/1`);
+}
+
+// // Get single object
+// GetList(coid:any): Observable<any> {
+//   let API_URL = `${this.REST_API}/list/${coid}`;
+//   return this.httpClient.get(API_URL, { headers: this.httpHeaders })
+//     .pipe(map((res: any) => {
+//         return res || {}
+//       }),
+//       catchError(this.handleError)
+//     )
+// }
+
 
   // Error 
   handleError(error: HttpErrorResponse) {

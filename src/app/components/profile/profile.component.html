@@ -1,0 +1,51 @@
+<p>profile works!</p>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container">
+  <h3>Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class=""><a href="/company-list">Home</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/subscription">Subscriptions</a></li>
+    <li><a href="/addg">Add Gallery</a></li>
+  </ul>
+
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Profile</h2>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Subscription</th> 
+        
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let profile of Profile; let i = index">
+            <th scope="row">{{profile.name}}</th>
+            <td>{{profile.email}}</td>
+            <td>{{profile.age}}</td>
+            <td>Plan 1 (Basic)</td>
+            <!-- <td>{{company.name}}</td> -->
+           
+          
+        </tbody>
+      </table>
+      <div class="form-group" style="align-content: center;">
+        <button class="btn btn-primary " type="submit" (click)="navigate()"  >Edit Profile</button>
+      </div>
+
+      
+
+    </div>
+  </div>
+

@@ -1,0 +1,32 @@
+<p>list-show works!</p>
+<p>review-list works!</p>
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Review List</h2>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+           
+            <th scope="col">Company_ID</th>
+            
+            <th scope="col">Review</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let review of Reviews; let i = index; ">
+            <th scope="col">{{review.coid}}</th>
+           
+            <th scope="col">{{review.comment}}</th>
+            
+            
+            
+            <td class="text-center">
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

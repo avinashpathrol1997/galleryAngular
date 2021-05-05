@@ -1,0 +1,25 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container">
+  <h3>Welcome to Add Gallery Section</h3>
+  <ul class="nav nav-tabs">
+    <li class=""><a href="/company-list">Home</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/subscription">Subscriptions</a></li>
+    <li><a href="/addg">Add Gallery</a></li>
+  </ul>
+
+  <!-- <h3>Subscription No. selected: {{ sid }}</h3> -->
+  <h3>Congratulations You have selected : {{ text1 }}</h3>
+
+
+  
+      <div style="text-align:left;">
+      <img *ngFor='let url of urls'  [src]="url" height="400" width="400"> <br/>
+      
+      <input type='file' (change)="onSelectFile($event)" multiple>
+      </div>
